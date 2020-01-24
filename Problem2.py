@@ -13,26 +13,20 @@ find the sum of the even-valued terms.
 """
 
 
-def evenfib(prev, num, sum):
+def evenfib(prev, num, total):
     if num < 4000000:
-        if num == 1:
-            if num % 2 == 0:
-                sum += num
-                #print(num)
-            prev = 1
-            num = 2
-            evenfib(prev, num, sum)
-        else:
-            if num % 2 == 0:
-                sum += num
-                #print(num)
-            temp = num
-            num += prev
-            prev = temp
-            evenfib(prev, num, sum)
+        if num % 2 == 0:
+            total += num
+        temp = num
+        num += prev
+        prev = temp
+        evenfib(prev, num, total)
     else:
-        print(sum)
+        print(total)
 
 
+evenfib(0, 1, 0)
 
-evenfib(0,1,0)
+
+# Answer is 4613732
+
