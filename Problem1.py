@@ -25,3 +25,6 @@ def multiples3and5(max):
 
 
 print(multiples3and5(1000))
+
+# Answer is 233168
+
